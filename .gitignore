@@ -1,3 +1,6 @@
+.ipynb_checkpoints/
+.spyproject/
+__pycache__/
 sensor_descriptions
 Output
 TestMetMM.arts
@@ -5,3 +8,4 @@ TestMetMM.rep
 TestMetMM-TRE.arts
 jacobian.py
 sbatch_alex.sh
+cs50_file01.py
