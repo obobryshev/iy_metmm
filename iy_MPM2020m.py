@@ -6,12 +6,13 @@ Parameters:
 Returns:
 """
 
-import numpy as np
-import pyarts as py
-import pyarts.workspace
-import datetime
+
 
 def main(nelem=1125, model="O2-MPM2020", verbosity = 2):
+    import pyarts as py
+    import pyarts.workspace
+    import datetime
+    
     
     ws = py.workspace.Workspace(verbosity)
     ws.execute_controlfile("general/general.arts")
@@ -79,8 +80,8 @@ def main(nelem=1125, model="O2-MPM2020", verbosity = 2):
     species = [
         "H2O, H2O-SelfContCKDMT252, H2O-ForeignContCKDMT252",
         "O2-MPM2020",
-        #"N2,  N2-CIAfunCKDMT252, N2-CIArotCKDMT252",
-        #"O3",
+        "N2,  N2-CIAfunCKDMT252, N2-CIArotCKDMT252",
+        "O3",
     ]
     # ws.abs_speciesSet( species=species )
 
@@ -162,6 +163,8 @@ def main(nelem=1125, model="O2-MPM2020", verbosity = 2):
     ws.WriteXML( "ascii", ws.iy, "Output/iy_" + model + "_midlat-s_" + tt_time + ".xml" )
 
     print("Success! We reached the finish!")
+
+    return tt_time
 
 
 if __name__ == "__main__":

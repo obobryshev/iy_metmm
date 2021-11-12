@@ -6,12 +6,13 @@ Parameters:
 Returns:
 """
 
-import numpy as np
-import pyarts as py
-import pyarts.workspace
-import datetime
+
 
 def main(nelem=1125, model="O2-TRE05", verbosity = 2):
+    import pyarts as py
+    import pyarts.workspace
+    import datetime
+    
     ws = py.workspace.Workspace(verbosity)
     ws.execute_controlfile("general/general.arts")
     ws.execute_controlfile("general/continua.arts")
@@ -146,6 +147,8 @@ def main(nelem=1125, model="O2-TRE05", verbosity = 2):
     ws.WriteXML( "ascii", ws.iy, "Output/iy_" + model + "_midlat-s_" + tt_time + ".xml" )
 
     print("Success! We reached the finish!")
+
+    return tt_time
 
 
 if __name__ == "__main__":
