@@ -1,10 +1,13 @@
 # iy_metmm
 
-Remembering the markdown.
+_Remembering_ the **markdown**.
 List of items here.
 
 Also todo list.
 - make a python package out of this.
 - so that I can load this, as module.
 
-More markdown tests.
+Links to external cites:
+[Search for it][def]
+
+[def]: www.google.com
