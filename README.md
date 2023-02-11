@@ -10,4 +10,4 @@ Also todo list.
 Links to external cites:
 [Search for it][def]
 
-[def]: www.google.com
+[def]: https://www.google.com
