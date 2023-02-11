@@ -1,0 +1,28 @@
+###
+# Included by TestMetMM.arts
+
+Arts2{
+    output_file_formatSetZippedAscii
+
+    # 1. General
+    # modify the maximum propagation step, from the default to 250 m :
+    NumericSet( ppath_lmax, 250 )
+
+    # Surface
+    surface_rtprop_agendaSet( option="Specular_NoPol_ReflFix_SurfTFromt_surface" )
+
+    # (standard) emission calculation
+    iy_main_agendaSet( option="Emission" )
+
+    # cosmic background radiation
+    iy_space_agendaSet( option="CosmicBackground" )
+
+    # standard surface agenda (i.e., make use of surface_rtprop_agenda)
+    iy_surface_agendaSet( option="UseSurfaceRtprop" )
+
+    # sensor-only path
+    ppath_agendaSet( option="FollowSensorLosPath" )
+
+    # no refraction
+    ppath_step_agendaSet( option="GeometricPath" )
+}
