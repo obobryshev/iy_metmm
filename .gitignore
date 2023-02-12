@@ -2,8 +2,9 @@
 .spyproject/
 .idea
 .kdev4
+.vscode
 __pycache__
-iy_venv
+iymetmm.egg-info
 sensor_descriptions
 Output
 TestMetMM.rep
